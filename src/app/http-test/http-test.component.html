@@ -2,7 +2,7 @@
   <h3>buscar gifs:</h3>
 
 
-    <form (keyup.enter)="limiteGif(limite); buscar(txtquery); agregarAHistorial(limite)">
+    <form (keyup.enter)="limiteGif(limite); buscar(txtquery); agregarAHistorial(txtquery.value)">
       <input type="text" placeholder="Buscar gifs" #txtquery>
       <input type="number" name="limite" min=0 max=50 [value]=limite [(ngModel)]=limite>
     </form>

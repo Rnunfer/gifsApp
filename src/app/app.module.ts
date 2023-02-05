@@ -7,6 +7,7 @@ import { HttpTestComponent } from './http-test/http-test.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { GifsService } from './servicios/gifs.servicios';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GifsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

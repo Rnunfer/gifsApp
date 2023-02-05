@@ -1,3 +1,8 @@
-<section class="bg-dark text-center p-2">
-  <h2 class="text-light">HISTORIAL</h2>
+<section class="bg-dark text-center p-2 text-light">
+  <h2>HISTORIAL</h2>
+  <ul class="list-unstyled">
+    <li *ngFor="let busqueda of historial">
+      {{busqueda}}
+    </li>
+  </ul>
 </section>

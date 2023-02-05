@@ -34,7 +34,7 @@ export class HttpTestComponent {
       this.limite = limite;
     }
 
-    agregarAHistorial(a:number) {
-      this.gifsService.agregarAHistorial(a);
+    agregarAHistorial(txt:string) {
+      this.gifsService.agregarAHistorial(txt);
     }
 }
