@@ -1,0 +1,8 @@
+<ul class="row p-0 m-0" style="display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden;">
+  <li class="d-inline list-style-none p-0 m-2" *ngFor="let gif of resultados">
+    <img class="img-fluid" [src]="gif.images.downsized.url" frameBorder="0">
+    <p><a [href]="gif.url">{{gif.title}}></a></p>
+  </li>
+</ul>
+
+

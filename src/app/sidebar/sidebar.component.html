@@ -1,8 +1,7 @@
-<section class="bg-dark text-center p-2 text-light">
-  <h2>HISTORIAL</h2>
-  <ul class="list-unstyled">
-    <li *ngFor="let busqueda of historial">
-      {{busqueda}}
-    </li>
+<section class="text-center p-2 text-light" style="">
+  <h2 style="border-bottom: 2px solid white;">HISTORIAL</h2>
+  <ul class="list-unstyled row align-items-center justify-content-center">
+    <input class="col-8 btn btn-warning" type="button" *ngFor="let busqueda of historial" [value]=busqueda (click)="buscar(busqueda, 10)">
   </ul>
+  <input *ngIf="historial.length != 0" type="button" class="btn btn-danger" value="Borrar historial" (click)="borrarHistorial()">
 </section>

@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Gifresponse, gif } from './http-test.interface';
-import { GifsService } from '../servicios/gifs.servicios';
+import { GifsService } from 'src/app/servicios/gifs.servicios';
 
 @Component({
   selector: 'app-http-test',
@@ -11,13 +11,13 @@ import { GifsService } from '../servicios/gifs.servicios';
 })
 export class HttpTestComponent {
 
-@ViewChild('txtquery') txtquery!:ElementRef<HTMLInputElement>;
-
-  limite: number = 10;
-  resultados: gif [] = [];
   constructor(private http:HttpClient, private gifsService: GifsService ){}
 
-    buscar(txt:HTMLInputElement) {
+  get resultados() {
+    return this.gifsService.resultados;
+  }
+
+    /*buscar(txt:HTMLInputElement) {
       console.log(txt.value);
 
       this.http.get<Gifresponse>("https://api.giphy.com/v1/gifs/search?api_key=yGhLOEEGIflLvexLsJEHF2xHpNRqIh8j&q=" + txt.value +"&limit=" + this.limite)
@@ -28,13 +28,5 @@ export class HttpTestComponent {
         }
       })
       //txt.value = '';
-    }
-
-    limiteGif(limite:number) {
-      this.limite = limite;
-    }
-
-    agregarAHistorial(txt:string) {
-      this.gifsService.agregarAHistorial(txt);
-    }
+    }*/
 }
